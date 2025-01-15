@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
 
     <!-- CSS -->
-     <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\styles.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="main-header">
@@ -15,10 +17,9 @@
         <div class="logo-icon"></div>
 
         <!-- Navigation -->
-        <nav>
+        <nav class="navigasi">
             <a href="#home-page" class="left-rounded">Home</a>
             <a href="#our-profile">Our Profile</a>
-            <a href="#portfolio">Portfolio</a>
             <a href="#message-us" class="right-rounded">Message</a>
         </nav>
     </header>
@@ -29,49 +30,116 @@
     <main>
         <!-- Home Page -->
         <section>
-           <header id="home-page">
-            <!-- Title -->
-                <h1>Hi, <span id="user-greeting">User</span>Welcome to Our Website !</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quae molestias voluptatum animi odit beatae officiis, nulla sunt ut, cumque hic dolore voluptas placeat cum dolorem atque minima voluptates! Blanditiis!</p>
-           </header>
-           
-           <div class="banner-image">
+            <header id="home-page">
+                <!-- Title -->
+                <h1>Hi, <span id="userGreeting">User</span> Welcome to Our Website !</h1>
+                <p>Ini Mini Project</p>
+                <button id="changeName">Ganti Nama</button>
+            </header>
 
-           </div>
+            <!-- Image Slider -->
+            <div class="slides">
+                <img src="assets\chicago.jpg" class="slider" />
+                <img src="assets\como.jpg" class="slider" />
+                <img src="assets\italy.jpg" class="slider" />
+                <img src="assets\maldives.jpg" class="slider" />
+            </div>
 
+            <!-- Button Banner -->
+            <div class="banner-click">
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
         </section>
+
+        <hr>
 
         <!-- Our Profile -->
         <section>
             <header id="our-profile">
-            <!-- Title -->
+                <!-- Title -->
                 <h1>Our Profile</h1>
-           </header>
+            </header>
 
-           <!-- Content -->
-           <div class="content"></div>
+            <!-- Content -->
+            <div class="container-profile">
+                <div id="foto1">
+                    <p><b>Leader</b></p>
+                    <img src="assets/leader.jpg" alt="" class="foto1">
+                </div>
+
+                <div id="foto2">
+                    <p><b>UI UX Designer</b></p>
+                    <img src="assets/staff1.jpg" alt="" class="foto2">
+                </div>
+
+                <div id="foto3">
+                    <p><b>FullStack Developer</b></p>
+                    <img src="assets/staff2.jpg" alt="" class="foto3">
+                </div>
         </section>
 
-        <!-- Portfolio -->
-         <section>
-            <header id="portfolio">
-                <!-- Title -->
-                    <h1>Portfolio</h1>
-               </header>
+        <hr>
 
-            <div class="content"></div>
-         </section>
-
-         <!-- Message Us --> 
-          <section>
+        <!-- Message Us -->
+        <section>
             <header id="message-us">
                 <!-- Title -->
-                    <h1>Message Us</h1>
-               </header>
+                <h1>Message Us</h1>
+            </header>
+        </section>
 
-            <div class="content"></div>
-          </section>
+        <section class="container">
+            <div class="form-section">
+                <!-- form -->
+                <form action="" method="post" autocomplete="off">
+                    <!-- nama -->
+                    <div>
+                        <label for="nama">Masukkan nama :</label>
+                        <input id="nama" type="text" name="nama" autofocus required>
+                        <br>
+                    </div>
 
+                    <!-- tanggal lahir -->
+                    <div>
+                        <label for="tanggal">Tanggal Lahir : </label>
+                        <input id="tanggal" type="date" name="tanggal" required>
+                        <br>
+                    </div>
+
+                    <!-- email -->
+                    <div>
+                        <label for="email">Masukkan email : </label>
+                        <input id="email" type="email" name="email" required>
+                        <br>
+                    </div>
+
+                    <!-- textarea -->
+                    <div>
+                        <label for="subject" class="msg">Pesan : </label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." required minlength="5"
+                            maxlength="20"></textarea>
+                        <br>
+                    </div>
+
+                    <!-- submit -->
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Bagian Output -->
+            <section class="output">
+                <div class="current">
+                    <p>Current time : </p>
+                    <br>
+                    <p>Nama : </p>
+                    <p>Tanggal Lahir : </p>
+                    <p>Email : </p>
+                    <p>Pesan : </p>
+                </div>
+            </section>
     </main>
 
     <hr>
@@ -81,6 +149,7 @@
         <p>&copy; 2025 - All rights reserved </p>
     </footer>
 
-
+    <script src="js\script.js"></script>
 </body>
+
 </html>
